@@ -9,18 +9,73 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./assets/fonts/RobotoCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: italic;
+    font-weight: bold;
+    src: url('./assets/fonts/RobotoCondensed-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: italic;
+    font-weight: normal;
+    src: url('./assets/fonts/RobotoCondensed-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: lighter;
+    src: url('./assets/fonts/RobotoCondensed-Light.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: italic;
+    font-weight: lighter;
+    src: url('./assets/fonts/RobotoCondensed-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/RobotoCondensed-Regular.ttf');
+}
+
+ion-toolbar {
+    /*  --color: rgb(157, 215, 238);
+    --background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 243, 255, 1) 100%);*/
+}
+
+.header-ios ion-toolbar:last-child {
+    /*--border-width: 0;*/
+}

@@ -3,51 +3,68 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
-  {
-    path: 'tabs',
-    component: TabsPage,
-    children: [
-      {
-        path: 'tab1',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-          }
-        ]
-      },
-      {
-        path: 'tab2',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
-        ]
-      },
-      {
-        path: 'tab3',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
-        ]
-      },
-      {
+    {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/app/home',
         pathMatch: 'full'
-      }
-    ]
-  },
+      },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
+    component: TabsPage,
+    children: [
+       
+      {
+        path: 'home',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../home/home.module').then(m => m.HomePageModule)
+          }
+        ]
+      },
+      {
+        path: 'eventos',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../eventos/eventos.module').then(m => m.EventosPageModule)
+          }
+        ]
+      },
+      {
+        path: 'mapa',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../mapa/mapa.module').then(m => m.MapaPageModule)
+          }
+        ]
+      },
+      {
+        path: 'busca',
+        children: [
+            {
+                path: '',
+                loadChildren: () => 
+                import('../busca/busca.module').then( m => m.BuscaPageModule)
+            }
+        ]
+      },
+      {
+        path: 'sobre',
+        children: [
+          {
+            path: '',
+            loadChildren: () => 
+                import('../sobre/sobre.module').then( m => m.SobrePageModule)
+          }
+        ]
+      }
+      
+    ]
   }
 ];
 
